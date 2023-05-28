@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/library?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT
+    username: root
+    password: root
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    encoding: UTF-8
+    mode: HTML5
+  mvc:
+    static-path-pattern: /static/**
+mybatis:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package:  com.example.demo.bean
